@@ -12,11 +12,11 @@ const Footer = () => {
               <img src="/images/massage.png" alt="" />
             </div>
             <div className="footer-contact-link">
-              <a href="tel:5474476464">(833) 399-3054</a>
+              <a href="tel:(224) 432-8606">(224) 432-8606</a>
               <br />
               <br />
-              <a href="mailto:support@infrontwebworkers.com">
-                support@infrontwebworkers.com
+              <a href="mailto:tshabbir@venturespoint.com">
+                tshabbir@venturespoint.com
               </a>
             </div>
           </div>
