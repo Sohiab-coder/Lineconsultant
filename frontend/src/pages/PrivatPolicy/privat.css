@@ -1,0 +1,58 @@
+.privat-center {
+  margin: 5% 12%;
+}
+
+.pravat-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.pravat-heading h2 {
+  color: #181818;
+  font-family: "Poppins";
+  font-size: 3.2rem;
+}
+
+.pravat-heading p {
+  color: #0c5adb;
+  font-size: 3rem;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.pravat-img {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.pravat-img img {
+  width: 80%;
+}
+
+.pravat-text p {
+  margin-bottom: 22px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+}
+
+.pravat-text h2 {
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .pravat-heading h2 {
+    font-size: 2rem;
+  }
+  .pravat-heading p {
+    font-size: 2rem;
+  }
+  .privat-center {
+    margin: 5% 2%;
+  }
+}

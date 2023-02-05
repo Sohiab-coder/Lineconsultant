@@ -1,0 +1,108 @@
+.buttomabout {
+  margin: 5% 10%;
+}
+.buttom-container {
+  display: flex;
+  gap: 14px;
+}
+
+.buttom-left {
+  width: 50%;
+}
+
+.buttom-heading {
+  margin-bottom: 30px;
+}
+
+.buttom-heading h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #333;
+}
+
+.buttom-heading span {
+  width: 69px;
+  display: inline-block;
+  height: 2px;
+  background-color: #0693e3;
+  margin-top: 20px;
+}
+
+.buttom-about-buttom-text p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: #333;
+}
+
+.buttom-about-btn {
+  margin: 3rem 0;
+}
+
+.btn-link a {
+  background-color: #0c5adb;
+  color: #fff;
+  border-radius: 8px;
+  padding: 15px 28px;
+  font-size: 19px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.buttom-right {
+  width: 50%;
+}
+
+.buttom-img {
+  width: 100%;
+}
+
+.buttom-img img {
+  width: 100%;
+}
+
+.buttom-img img {
+  width: 100%;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  from {
+    transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .buttomabout {
+    margin: 5% 2%;
+  }
+
+  .buttom-container {
+    display: block;
+  }
+
+  .buttom-left,
+  .buttom-right {
+    width: 100%;
+  }
+  .buttom-img {
+    text-align: center;
+  }
+  .buttom-img img {
+    width: 85%;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}

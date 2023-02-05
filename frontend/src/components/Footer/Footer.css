@@ -1,0 +1,101 @@
+.footer-container {
+  margin: 0 12%;
+}
+
+.footer {
+  background-color: #1d2730;
+}
+
+.top-footer {
+  padding: 50px 0;
+}
+
+.footer-top-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-icon {
+  margin-right: 20px;
+}
+
+.footer-contact-link a {
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-box {
+  width: 30%;
+}
+
+.title-footer h4 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-family: "Poppins";
+}
+
+.footer-title-2 p {
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.footer-title-2 span {
+  color: #fff;
+  font-family: "Poppins";
+}
+
+.footer-title-2 a {
+  color: #0056b3;
+  transition: all 0.3s linear;
+}
+
+.footer-title-2 a:hover {
+  color: #0057b3c2;
+}
+
+.footer-ul ul li {
+  margin-bottom: 25px;
+}
+
+.footer-ul ul li a {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s linear;
+}
+
+.footer-ul ul li a:hover {
+  color: #0056b3;
+}
+
+.footer-line {
+  width: 100%;
+  display: inline-block;
+  height: 2px;
+  margin: 20px 0;
+  background-color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    margin: 0 1.5%;
+  }
+
+  .footer-item {
+    display: block;
+  }
+  .footer-box {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}

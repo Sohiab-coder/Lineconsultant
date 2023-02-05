@@ -1,0 +1,157 @@
+.add-to-cart-container {
+  margin: 5% 10%;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.prod-img {
+  width: 20%;
+  margin-right: 28px;
+}
+
+.prod-img img {
+  width: 100%;
+}
+
+.prod-details {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.prod-name h3 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Roboto";
+  color: #222;
+}
+
+.prod-qty input {
+  width: 40px;
+  height: 30px;
+  border-color: #ccc;
+  border: 1px solid #ccc;
+  outline: none;
+  text-align: center;
+}
+
+.prod-qty {
+  display: flex;
+}
+
+.prod-qty button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-remove svg {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.hide-cart {
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hide-cart h1 {
+  font-size: 50px;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.hide-cart a {
+  background-color: #00138e;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 600;
+  padding: 16px 45px;
+  font-size: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #333;
+  transition: all 0.4s linear;
+}
+
+.hide-cart a:hover {
+  background-color: #fff;
+  color: #00138e;
+}
+
+.sub-total h2 {
+  font-size: 35px;
+  font-family: "Poppins";
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.total-price {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.total-price h3,
+h4 {
+  font-size: 23px;
+  font-family: "Roboto";
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.place {
+  margin-bottom: 25px;
+}
+
+.place a {
+  background-color: #0026ff;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins";
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 400;
+  box-shadow: 0 0 10px #333;
+  transition: all 0.4s linear;
+}
+
+.place a:hover {
+  background-color: #fff;
+  color: #00138e;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .add-to-cart-container {
+    margin: 5% 2%;
+  }
+
+  .cart-product,
+  .prod-details {
+    display: block;
+  }
+
+  .prod-img {
+    width: 100%;
+  }
+
+  .prod-remove {
+    margin-top: 10px;
+  }
+}

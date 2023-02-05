@@ -1,0 +1,47 @@
+.home-9{
+  margin-bottom: 50px;
+}
+
+.home-9-container {
+  padding: 50px 0;
+}
+
+.home-9-heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.home-9-heading h3 {
+  color: #fe6f0a;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.home-9-heading h2 {
+  color: #222;
+  font-family: "Poppins", Sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.home-9-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-9-icon {
+    display: block;
+  }
+
+  .home-9-icon img {
+    width: 20%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .home-9-heading h2 {
+    font-size: 30px;
+  }
+}

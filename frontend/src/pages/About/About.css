@@ -1,0 +1,125 @@
+
+.about-text {
+  max-width: 75%;
+  padding-left: 18%;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+.about-text a {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.about-text span {
+  font-size: 1.1rem;
+}
+
+.top-about {
+  margin: 5% 10%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.left-content {
+  width: 50%;
+}
+
+.left-heading {
+  margin-bottom: 30px;
+}
+
+.left-heading h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Roboto";
+  color: #333;
+}
+
+.left-heading .line {
+  width: 69px;
+  display: inline-block;
+  height: 2px;
+  background-color: #0693e3;
+  margin-top: 20px;
+}
+
+.left-text-about {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.left-text-top-about {
+  margin-bottom: 25px;
+}
+
+.left-text-top-about p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: #333;
+}
+
+.right-content {
+  width: 50%;
+}
+
+.about-top-img {
+  width: 85%;
+  text-align: center;
+  text-align: center;
+  margin: auto;
+}
+
+.about-top-img img {
+  width: 100%;
+}
+
+.about-top-img img {
+  width: 100%;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  from {
+    transform: translateY(-10px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .top-about {
+    margin: 7% 2%;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .home-3-img {
+    text-align: center;
+  }
+
+  .home-3-img img {
+    width: 65%;
+  }
+}

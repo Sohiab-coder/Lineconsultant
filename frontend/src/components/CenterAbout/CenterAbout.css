@@ -1,0 +1,80 @@
+.centerabout {
+  background-image: url("/public/images/process_bg.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center-heading {
+  text-align: center;
+  padding: 6rem 0 4rem 0;
+}
+
+.center-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.center-heading h2 {
+  color: #fff;
+  font-size: 35px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+  justify-content: space-evenly;
+}
+
+.icon-box {
+  cursor: pointer;
+}
+
+.icon-item {
+  width: 124px;
+  height: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e49d652;
+  border: 1px solid #1190eb;
+  border-radius: 50%;
+  margin-bottom: 35px;
+  transition: all 0.3s linear;
+}
+
+.icon-item:hover {
+  background-color: #144ed6;
+}
+
+.small {
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .center-heading h2 {
+    font-size: 28px;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+}

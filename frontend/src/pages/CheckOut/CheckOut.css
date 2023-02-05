@@ -1,0 +1,95 @@
+.check-out-container {
+  padding: 100px 0;
+  margin: 0 12%;
+}
+
+.check-out-heading {
+  margin-bottom: 25px;
+}
+
+.check-out-heading h3 {
+  font-size: 30px;
+  font-family: "Roboto";
+}
+
+form .form-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 8px;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 400;
+}
+
+form .form-input {
+  width: 50%;
+  outline: none;
+  font-size: 16px;
+  font-family: "Roboto";
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.order-bottum {
+  background-color: #e7b3c0d6;
+  color: #333;
+  padding: 1rem;
+}
+
+.oder-policy span,
+.conditions span {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.conditions,
+.oder-policy {
+  display: flex;
+  align-items: center;
+}
+
+.oder-policy a,
+.conditions a {
+  font-weight: 400;
+  font-family: "Poppins";
+  margin-left: 8px;
+  color: #0056b3;
+}
+
+.conditions .check-box {
+  margin-right: 12px;
+}
+
+.order-bottum button {
+  background-color: #96588a;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Poppins";
+  margin-top: 15px;
+  font-size: 18px;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+.order-product{
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .check-out-container {
+    padding: 50px 0;
+    margin: 0% 2%;
+  }
+  .conditions {
+    display: block;
+  }
+  form .form-input {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+}

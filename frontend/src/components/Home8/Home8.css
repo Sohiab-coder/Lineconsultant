@@ -1,0 +1,145 @@
+.home-8-heading {
+  text-align: center;
+}
+.home-8-heading h3 {
+  color: #fe6f0a;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.home-8-heading h2 {
+  font-family: "Poppins", Sans-serif;
+  font-size: 50px;
+}
+
+.home-8-items {
+  margin: 5% 12%;
+}
+
+.home-8-item {
+  position: relative;
+}
+
+.home-8-card {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.home-8-cart-box {
+  z-index: 111;
+  background-color: #fff;
+  width: 30%;
+  box-shadow: 0 0 10px rgb(199 199 199 / 61%);
+  border-radius: 15px;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+.home-8-cart-tag {
+  margin-bottom: 19px;
+}
+
+.home-8-cart-tag h3 {
+  font-size: 16px;
+  color: #222;
+  font-weight: 700;
+  font-family: "Poppins";
+}
+
+.home-8-cart-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.home-8-cart-price span {
+  margin-right: 10px;
+  font-size: 25px;
+  color: #222;
+}
+
+.home-8-cart-price h2 {
+  font-family: "Poppins";
+  font-size: 58px;
+  color: #222;
+}
+
+.home-8-cart-list ul li {
+  color: #222;
+  margin-bottom: 15px;
+  font-family: "Roboto";
+}
+
+.home-8-card-btn {
+  margin-top: 4rem;
+}
+
+.home-8-card-btn a {
+  color: black;
+  border: 1px solid;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-family: "Roboto";
+  font-weight: 600;
+  box-shadow: 0 4 10px #222;
+  box-shadow: 0 2px 6px #22222294;
+  transition: all 0.4s linear;
+}
+
+.home-8-card-btn a:hover {
+  background-color: #1134fa;
+  color: #fff;
+  border-color: #0026ff;
+}
+
+.home-8-side-img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.home-8-side-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-8-side-img img {
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .home-8-heading h2 {
+    font-size: 26px;
+  }
+  .home-8-side-img {
+    display: none;
+  }
+  .home-8-items {
+    margin: 5% 1%;
+  }
+
+  .home-8-card {
+    display: block;
+  }
+  .home-8-cart-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
