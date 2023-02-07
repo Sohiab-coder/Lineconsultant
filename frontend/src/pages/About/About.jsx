@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./About.css";
 import CenterAbout from "../../components/CenterAbout/CenterAbout";
 import ButtomAbout from "../../components/ButtomAbout/ButtomAbout";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const About = () => {
   return (
@@ -57,6 +58,12 @@ const About = () => {
       </div>
       <CenterAbout />
       <ButtomAbout />
+      <div className="whats-app">
+        <a href="tel:+8183924439">
+          <IoLogoWhatsapp />
+          <span>+8183924439</span>
+        </a>
+      </div>
     </section>
   );
 };

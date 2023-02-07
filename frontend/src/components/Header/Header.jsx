@@ -19,7 +19,7 @@ const Header = () => {
           <div className="left-nav">
             <div className="logo-text">
               <Link to="/">
-                <span>InFront Web Workers</span>
+                <span>Line Consultant</span>
               </Link>
             </div>
           </div>
@@ -30,26 +30,36 @@ const Header = () => {
                   <AiOutlineClose onClick={showNavbar} />
                 </li>
                 <li>
-                  <Link onClick={showNavbar} to={"/"}>Home</Link>
+                  <Link onClick={showNavbar} to={"/"}>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link onClick={showNavbar} to={"/about"}>About</Link>
+                  <Link onClick={showNavbar} to={"/about"}>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link onClick={showNavbar} to={"/shop"}>Shop</Link>
+                  <Link onClick={showNavbar} to={"/shop"}>
+                    Shop
+                  </Link>
                 </li>
                 <li>
-                  <Link onClick={showNavbar} to={"/contact"}>Contact</Link>
+                  <Link onClick={showNavbar} to={"/contact"}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="right-right">
               <div className="contect-info">
                 <img src="/images/phone_icon.png" alt="" />
-                <a href="tel:(224) 432-8606">(224) 432-8606 </a>
+                <a href="http://wa.me/qr/7COUQGIELTRM1" target={"_blank"}>+8183924439 </a>
               </div>
               <div className="cart-bth">
-                <Link onClick={showNavbar} to={"/cart"}>View Cart</Link>
+                <Link onClick={showNavbar} to={"/cart"}>
+                  View Cart
+                </Link>
               </div>
             </div>
           </div>

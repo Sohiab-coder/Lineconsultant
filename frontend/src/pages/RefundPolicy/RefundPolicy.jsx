@@ -51,11 +51,11 @@ const RefundPolicy = () => {
           <h5>InFront Web Workers</h5>
           <div className="refund-contact">
             <p>
-              <strong>Phone</strong> – (888) 242-7670
+              <strong>Phone</strong> – +8183924439
             </p>
             <br />
             <p>
-              <strong>Email</strong> – support@infrontwebworkers.com
+              <strong>Email</strong> – contact@lineconsultant.com
             </p>
           </div>
         </div>

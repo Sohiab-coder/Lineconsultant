@@ -1,4 +1,5 @@
 import React from "react";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "./Shop.css";
 
@@ -56,6 +57,12 @@ const Shop = () => {
               ))}
           </div>
         </div>
+      </div>
+      <div className="whats-app">
+        <a href="tel:+8183924439">
+          <IoLogoWhatsapp />
+          <span>+8183924439</span>
+        </a>
       </div>
     </section>
   );

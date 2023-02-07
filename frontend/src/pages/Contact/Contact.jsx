@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { contactForm } from "../../Redex/userAction";
 import toast from "react-hot-toast";
 import Loader from "../../components/Loader/Loader";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -65,17 +66,17 @@ const Contact = () => {
               <div className="box">
                 <div className="space-box"></div>
                 <p>
-                  1008 James St <br /> Monongahela, PA 15063
+                  4870 Sadler Rd, <br /> Suite 300 Glen Allen, Virginia 23060
                 </p>
               </div>
               <div className="box">
                 <div className="space-box"></div>
-                <a href="callto:88888888">(833) 399-3054</a>
+                <a href="callto:+8183924439">+8183924439</a>
               </div>
               <div className="box">
                 <div className="space-box"></div>
-                <a href="mailto:support@infrontwebworkers.com">
-                  support@infrontwebworkers.com
+                <a href="mailto:contact@lineconsultant.com">
+                  contact@lineconsultant.com
                 </a>
               </div>
             </div>
@@ -153,6 +154,12 @@ const Contact = () => {
             <Link to={"/shop"}>Get Started Now</Link>
           </div>
         </div>
+      </div>
+      <div className="whats-app">
+        <a href="tel:+8183924439">
+          <IoLogoWhatsapp />
+          <span>+8183924439</span>
+        </a>
       </div>
     </section>
   );

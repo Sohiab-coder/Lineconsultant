@@ -9,6 +9,7 @@ import Home5 from "../../components/Home5/Home5";
 import Home7 from "../../components/Home7/Home7";
 import Home8 from "../../components/Home8/Home8";
 import Home9 from "../../components/Home9/Home9";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Home = () => {
   const options = {
@@ -158,6 +159,12 @@ const Home = () => {
         <Home3 />
         <Home4 />
         <Home5 />
+        <div className="whats-app">
+          <a href="http://wa.me/qr/7COUQGIELTRM1" target={"_blank"}>
+            <IoLogoWhatsapp />
+            <span>+8183924439</span>
+          </a>
+        </div>
       </section>
       <Home7 />
       <Home8 />

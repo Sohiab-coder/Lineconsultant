@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,11 +11,11 @@ const Footer = () => {
               <img src="/images/massage.png" alt="" />
             </div>
             <div className="footer-contact-link">
-              <a href="tel:(224) 432-8606">(224) 432-8606</a>
+              <a href="http://wa.me/qr/7COUQGIELTRM1" target={"_blank"}>+8183924439</a>
               <br />
               <br />
               <a href="mailto:tshabbir@venturespoint.com">
-                tshabbir@venturespoint.com
+                contact@lineconsultant.com
               </a>
             </div>
           </div>
@@ -31,7 +30,7 @@ const Footer = () => {
                     <h4>Address</h4>
                   </div>
                   <div className="footer-title-2">
-                    <p>1008 James St Monongahela, PA 15063</p>
+                    <p>4870 Sadler Rd, Suite 300 Glen Allen, Virginia 23060</p>
                     <br />
                     <br />
                     <span>Copyrights By </span>
@@ -46,16 +45,14 @@ const Footer = () => {
                   <div className="footer-ul">
                     <ul>
                       <li>
-                        <Link to={"/privacy-policy"}>Privacy Policy</Link>
+                        <a href={"/privacy-policy"}>Privacy Policy</a>
                       </li>
                       <li>
                         {" "}
-                        <Link to={"/refund-policy"}>Refund Policy</Link>
+                        <a href={"/refund-policy"}>Refund Policy</a>
                       </li>
                       <li>
-                        <Link to={"/terms-and-conditions"}>
-                          Terms & Conditions
-                        </Link>
+                        <a href={"/terms-and-conditions"}>Terms & Conditions</a>
                       </li>
                     </ul>
                   </div>
@@ -67,16 +64,16 @@ const Footer = () => {
                   <div className="footer-ul">
                     <ul>
                       <li>
-                        <Link to={"/"}>Home</Link>
+                        <a href={"/"}>Home</a>
                       </li>
                       <li>
-                        <Link to={"/about"}>About</Link>
+                        <a href={"/about"}>About</a>
                       </li>
                       <li>
-                        <Link to={"/shop"}>Shop</Link>
+                        <a href={"/shop"}>Shop</a>
                       </li>
                       <li>
-                        <Link to={"/contact"}>Contact</Link>
+                        <a href={"/contact"}>Contact</a>
                       </li>
                     </ul>
                   </div>
