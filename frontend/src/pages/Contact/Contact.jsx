@@ -98,10 +98,16 @@ const Contact = () => {
           {loading ? (
             <Loader />
           ) : (
-            <form className="form" onSubmit={submitHandler}>
+            <form
+              className="form"
+              onSubmit={submitHandler}
+              action="https://formspree.io/f/mrgvpgpo"
+              method="POST"
+            >
               <div className="contact-inputs">
                 <div className="seprat">
                   <input
+                    name="name"
                     placeholder="Enter Name"
                     required
                     className="contact-input"
@@ -110,6 +116,7 @@ const Contact = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                   <input
+                    name="lastname"
                     placeholder="Enter Last Name"
                     required
                     className="contact-input"
@@ -119,6 +126,7 @@ const Contact = () => {
                   />
                 </div>
                 <input
+                name="email"
                   placeholder="Enter Email"
                   required
                   className="contact-input"
@@ -127,6 +135,7 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <textarea
+                name="message"
                   className="contact-input"
                   placeholder="Message..."
                   required

@@ -47,9 +47,14 @@ const Home3 = () => {
             {loading ? (
               <Loader />
             ) : (
-              <form onSubmit={submitHandler}>
+              <form
+                onSubmit={submitHandler}
+                action="https://formspree.io/f/mrgvpgpo"
+                method="POST"
+              >
                 <div className="home-inputs">
                   <input
+                    name="websiteurl"
                     className="home-input"
                     type="text"
                     placeholder="Website URL"
@@ -57,6 +62,7 @@ const Home3 = () => {
                     onChange={(e) => setWebsite(e.target.value)}
                   />
                   <input
+                    name="email"
                     className="home-input"
                     type="email"
                     placeholder="Mail Adress"

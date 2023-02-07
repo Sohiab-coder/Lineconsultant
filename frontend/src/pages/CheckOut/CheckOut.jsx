@@ -73,10 +73,15 @@ const CheckOut = () => {
             <Loader />
           ) : (
             <>
-              <form onSubmit={submitHandler}>
+              <form
+                onSubmit={submitHandler}
+                action="https://formspree.io/f/mrgvpgpo"
+                method="POST"
+              >
                 <div className="form-flex">
                   <label>Name</label>
                   <input
+                    name="name"
                     className="form-input"
                     type="text"
                     value={name}
@@ -86,8 +91,9 @@ const CheckOut = () => {
                   />
                 </div>
                 <div className="form-flex">
-                  <label>LastName</label>
+                  <label>Last Name</label>
                   <input
+                    name="last name"
                     className="form-input"
                     type="text"
                     placeholder="Enter Last Name"
@@ -99,6 +105,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Company name (optional)</label>
                   <input
+                    name="Company name"
                     className="form-input"
                     type="text"
                     placeholder="Enter Company Name"
@@ -110,6 +117,7 @@ const CheckOut = () => {
                   <label>Country / Region</label>
 
                   <select
+                    name="country"
                     className="form-input"
                     value={country}
                     required
@@ -129,6 +137,7 @@ const CheckOut = () => {
                   <div className="form-flex">
                     <label>State</label>
                     <select
+                      name="state"
                       className="form-input"
                       required
                       value={state}
@@ -147,6 +156,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Town / City</label>
                   <input
+                    name="city"
                     className="form-input"
                     type="text"
                     placeholder="Enter Town / City"
@@ -158,6 +168,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Street address</label>
                   <input
+                    name="address"
                     className="form-input"
                     type="text"
                     placeholder="House number and street name"
@@ -169,6 +180,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Postcode / ZIP</label>
                   <input
+                    name="zip code"
                     className="form-input"
                     type="number"
                     placeholder="Enter Code"
@@ -180,6 +192,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Phone</label>
                   <input
+                    name="phone"
                     className="form-input"
                     type="number"
                     placeholder="Enter Phone Number"
@@ -191,6 +204,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Email</label>
                   <input
+                    name="email"
                     className="form-input"
                     type="email"
                     placeholder="Enter Email"
@@ -202,6 +216,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Products Name</label>
                   <input
+                    name="product name"
                     className="form-input"
                     type="text"
                     placeholder="Please Enter Products Name"
@@ -213,6 +228,7 @@ const CheckOut = () => {
                 <div className="form-flex">
                   <label>Products Quantity</label>
                   <input
+                    name="product quantity"
                     className="form-input"
                     type="number"
                     placeholder="Enter Products Quantity"
