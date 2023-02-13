@@ -1,69 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Shop.css";
+import { getAllProducts } from "../../Redex/Actions/shopAction";
+import { toast } from "react-hot-toast";
+import Loader from "../../components/Loader/Loader";
 
 const Shop = () => {
-  const card = [
-    {
-      name: "Basic Level Seo package",
-      price: `$99.99`,
-      _id: "basic-level-seo-package",
-      img: "/images/traditional-to-enterprise-seo-6229f8159834d-sej-300x300.png",
-    },
-    {
-      name: "Ecommmerce Seo package",
-      img: "/images/seo-idea-lightbulbs-ss-1920-300x300.jpg",
-      price: `$199.99`,
-      _id: "ecommerce-seo-package",
-    },
-    {
-      name: "Starter Level Seo package",
-      img: "images/search-engine-optimization-services-300x300.jpg",
-      price: `$299.99`,
-      _id: "starter-level-seo-package",
-    },
-    {
-      name: "Plus Level Seo package",
-      img: "/images/Best-SEO-Agencies-300x300.jpg",
-      price: `$399.99`,
-      _id: "plus-level-seo-package",
-    },
-    {
-      name: "Pro Level Seo package",
-      img: "images/seo-concept-1024x683-1-300x300.jpg",
-      price: `$499.99`,
-      _id: "pro-level-seo-package",
-    },
-  ];
+  const dispatch = useDispatch();
+  const { products, error, loading } = useSelector((state) => state.shop);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+    if (error) {
+      toast.error(error);
+      dispatch({ type: "clearErrors" });
+    }
+  }, [dispatch, error]);
 
   return (
     <section className="shop-page">
-      <div className="main-shop">
-        <div className="shop-items">
-          <div className="shop-text">
-            <p> Showing all {card.length} results</p>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="main-shop">
+            <div className="shop-items">
+              <div className="shop-text">
+                <p> Showing all {products && products.length} results</p>
+              </div>
+              <div className="shop-cart">
+                {products &&
+                  products.map((item) => (
+                    <Cart
+                      key={item._id}
+                      id={item._id}
+                      name={item.name}
+                      price={`$${item.price}`}
+                      img={item.image.url}
+                    />
+                  ))}
+              </div>
+            </div>
           </div>
-          <div className="shop-cart">
-            {card &&
-              card.map((item) => (
-                <Cart
-                  key={item._id}
-                  id={item._id}
-                  name={item.name}
-                  price={item.price}
-                  img={item.img}
-                />
-              ))}
+          <div className="whats-app">
+            <a href="tel:+8183924439">
+              <IoLogoWhatsapp />
+              <span>Chat With Us</span>
+            </a>
           </div>
-        </div>
-      </div>
-      <div className="whats-app">
-        <a href="tel:+8183924439">
-          <IoLogoWhatsapp />
-          <span>+8183924439</span>
-        </a>
-      </div>
+        </>
+      )}
     </section>
   );
 };

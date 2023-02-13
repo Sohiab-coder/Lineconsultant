@@ -6,34 +6,33 @@ import "./Cart.css";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
+import { itemAddToCart } from "../../Redex/Actions/cartAction";
 
 const Cart = () => {
-  const { cartItem, subTotal } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const { cartItem: localCart, subTotal: localTotal } = useSelector(
-    (state) => state.cart
-  );
+  const { cartItems } = useSelector((state) => state.cart);
 
-  const inc = (id) => {
-    dispatch({ type: "addToCart", payload: { id } });
-    dispatch({ type: "totalPrice" });
+  const inc = (id, qty) => {
+    const newQty = qty + 1;
+    dispatch(itemAddToCart(id, newQty));
   };
 
-  const dec = (id) => {
-    dispatch({ type: "decrement", payload: id });
-    dispatch({ type: "totalPrice" });
+  const dec = (id, qty) => {
+    const newQty = qty - 1;
+    if (1 >= newQty) {
+      return;
+    }
+    dispatch(itemAddToCart(id, newQty));
   };
 
   const deleteHandler = async (id) => {
-    await dispatch({ type: "deleteToCart", payload: id });
-    toast.success("Remove To Cart")
-    dispatch({ type: "totalPrice" });
+    dispatch({ type: "deleteToCart", payload: id });
+    toast.success("Item remove to cart");
   };
 
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(localCart));
-    localStorage.setItem("cartPrice", JSON.stringify(localTotal));
-  }, [localCart, localTotal]);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   return (
     <section className="cart">
@@ -43,29 +42,33 @@ const Cart = () => {
         </div>
       </div>
       <div className="add-to-cart-container">
-        {cartItem && cartItem.length > 0 ? (
+        {cartItems && cartItems.length > 0 ? (
           <>
             <div className="add-to-card-product">
-              {cartItem.map((i) => (
-                <div key={i.id} className="main-prod-cart">
+              {cartItems.map((i) => (
+                <div key={i.product} className="main-prod-cart">
                   <div className="cart-product">
                     <div className="prod-img">
-                      <img src={i.imgSrc} alt="" />
+                      <img src={i.image} alt="" />
                     </div>
                     <div className="prod-details">
                       <div className="prod-name">
                         <h3>{i.name}</h3>
                       </div>
                       <div className="prod-price">
-                        <h4>{i.price}</h4>
+                        <h4>{i.price * i.quantity}</h4>
                       </div>
                       <div className="prod-qty">
-                        <button onClick={() => dec(i.id)}>-</button>
-                        <input type="number" readOnly value={i.qty} />
-                        <button onClick={() => inc(i.id)}>+</button>
+                        <button onClick={() => dec(i.product, i.quantity)}>
+                          -
+                        </button>
+                        <input type="number" readOnly value={i.quantity} />
+                        <button onClick={() => inc(i.product, i.quantity)}>
+                          +
+                        </button>
                       </div>
                       <div className="prod-remove">
-                        <IoMdTrash onClick={() => deleteHandler(i.id)} />
+                        <IoMdTrash onClick={() => deleteHandler(i.product)} />
                       </div>
                     </div>
                   </div>
@@ -76,7 +79,12 @@ const Cart = () => {
                 <div className="total">
                   <div className="total-price">
                     <h3>Total</h3>
-                    <h4>${subTotal}</h4>
+                    <h4>
+                      {`$${cartItems.reduce(
+                        (acc, item) => acc + item.quantity * item.price,
+                        0
+                      )}`}
+                    </h4>
                   </div>
                   <div className="place">
                     <Link to={"/checkout"}>Proceed to checkout</Link>

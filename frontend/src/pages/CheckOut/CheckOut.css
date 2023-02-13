@@ -34,7 +34,7 @@ form .form-input {
   border: 1px solid #ccc;
 }
 
-.order-bottum {
+.order-main-btn-section {
   background-color: #e7b3c0d6;
   color: #333;
   padding: 1rem;
@@ -64,7 +64,7 @@ form .form-input {
   margin-right: 12px;
 }
 
-.order-bottum button {
+.order-main-btn-section #order-main-btn {
   background-color: #96588a;
   border: none;
   color: #fff;
@@ -76,7 +76,7 @@ form .form-input {
   cursor: pointer;
 }
 
-.order-product{
+.order-product {
   margin-top: 30px;
 }
 

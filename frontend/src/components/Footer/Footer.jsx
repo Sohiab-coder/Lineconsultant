@@ -11,7 +11,9 @@ const Footer = () => {
               <img src="/images/massage.png" alt="" />
             </div>
             <div className="footer-contact-link">
-              <a href="http://wa.me/qr/7COUQGIELTRM1" target={"_blank"}>+8183924439</a>
+              <a href="http://wa.me/qr/7COUQGIELTRM1" target={"blank"}>
+                +8183924439
+              </a>
               <br />
               <br />
               <a href="mailto:tshabbir@venturespoint.com">
@@ -34,7 +36,7 @@ const Footer = () => {
                     <br />
                     <br />
                     <span>Copyrights By </span>
-                    <a href={"#home"}> InFront Web Workers </a>
+                    <a href={"#home"}> Line Consultant </a>
                     <span>2022</span>
                   </div>
                 </div>

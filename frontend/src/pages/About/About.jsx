@@ -61,7 +61,7 @@ const About = () => {
       <div className="whats-app">
         <a href="tel:+8183924439">
           <IoLogoWhatsapp />
-          <span>+8183924439</span>
+          <span>Chat With Us</span>
         </a>
       </div>
     </section>

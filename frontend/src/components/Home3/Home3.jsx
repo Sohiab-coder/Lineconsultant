@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { webForm } from "../../Redex/userAction";
+import React, { useState } from "react";
 import "./Home3.css";
-import { useDispatch, useSelector } from "react-redux";
-import Loader from "../Loader/Loader";
-import { toast } from "react-hot-toast";
 
 const Home3 = () => {
   const [website, setWebsite] = useState("");
   const [email, setEmail] = useState("");
 
-  const dispatch = useDispatch();
-  const { loading, message, error } = useSelector((state) => state.user);
-
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(webForm(website, email));
-    setEmail("");
-    setWebsite("");
   };
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-      dispatch({ type: "clearError" });
-    }
-    if (message) {
-      toast.success(message);
-      dispatch({ type: "clearMessage" });
-    }
-  }, [dispatch, error, message]);
 
   return (
     <section className="home3">
@@ -44,37 +23,33 @@ const Home3 = () => {
             </h2>
           </div>
           <div className="home-form">
-            {loading ? (
-              <Loader />
-            ) : (
-              <form
-                onSubmit={submitHandler}
-                action="https://formspree.io/f/mrgvpgpo"
-                method="POST"
-              >
-                <div className="home-inputs">
-                  <input
-                    name="websiteurl"
-                    className="home-input"
-                    type="text"
-                    placeholder="Website URL"
-                    value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
-                  />
-                  <input
-                    name="email"
-                    className="home-input"
-                    type="email"
-                    placeholder="Mail Adress"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <button className="submit-btn" type="submit">
-                  Check Now
-                </button>
-              </form>
-            )}
+            <form
+              onSubmit={submitHandler}
+              action="https://formspree.io/f/mrgvpgpo"
+              method="POST"
+            >
+              <div className="home-inputs">
+                <input
+                  name="websiteurl"
+                  className="home-input"
+                  type="text"
+                  placeholder="Website URL"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+                <input
+                  name="email"
+                  className="home-input"
+                  type="email"
+                  placeholder="Mail Adress"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <button className="submit-btn" type="submit">
+                Check Now
+              </button>
+            </form>
           </div>
         </div>
         <div className="home-3-right">

@@ -1,0 +1,194 @@
+.blue {
+  color: #0026ff;
+}
+
+.black {
+  color: black;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 70vh;
+}
+
+.left-dashboard {
+  width: 80%;
+  padding: 5rem 10rem;
+}
+
+.product-create-area .create-product-form {
+  width: 70%;
+  margin: auto;
+}
+
+.product-create-area .create-product-form div {
+  margin: 20px 0;
+}
+
+.product-create-area .create-product-form input,
+.product-create-area .create-product-form textarea {
+  padding: 10px 20px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-family: "Roboto";
+  width: 100%;
+}
+
+.product-img input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+  margin-left: 20px;
+  z-index: 22;
+  padding: 10px 0px;
+  border: none;
+}
+
+.product-img {
+  text-align: center;
+}
+
+.product-img img {
+  width: 250px;
+  object-fit: contain;
+  margin: 10px 0 20px 0;
+}
+
+.product-create-area p {
+  margin: 30px 0;
+  font-size: 22px;
+  color: black;
+  font-family: "Roboto";
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.product-create-area h2 {
+  margin-top: 35px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.right-dashboard {
+  width: 20%;
+}
+
+.right-dashboard section {
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.right-dashboard section div {
+  margin-bottom: 30px;
+}
+
+.right-dashboard section a button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.right-dashboard section a button svg {
+  margin-right: 15px;
+}
+
+.left-admin-user-dashboard {
+  width: 80%;
+  padding: 1rem;
+}
+
+.right-admin-user-dashboard {
+  width: 20%;
+}
+
+.right-admin-user-dashboard section {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.right-admin-user-dashboard section div {
+  margin-bottom: 30px;
+}
+
+.right-admin-user-dashboard section a button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.right-admin-user-dashboard section a button svg {
+  margin-right: 15px;
+}
+
+main {
+  max-width: 90%;
+  background-color: white;
+  margin: auto;
+  height: 100%;
+  overflow-x: auto;
+}
+
+main table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 1rem;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+td {
+  color: black;
+}
+
+tr td a {
+  color: red;
+}
+
+.delete svg {
+  color: red;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .dashboard {
+    display: block;
+  }
+
+  .left-dashboard,
+  .left-admin-user-dashboard {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .product-create-area .create-product-form {
+    width: 100%;
+    margin: auto;
+  }
+
+  .right-dashboard,
+  .right-admin-user-dashboard {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}

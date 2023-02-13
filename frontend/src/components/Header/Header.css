@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 4%;
+  margin: 0 2%;
 }
 
 .nav-list {
@@ -16,25 +16,22 @@
 }
 
 .left-nav {
-  /* width: 60%; */
+  width: 12%;
   min-height: 100px;
   display: flex;
   align-items: center;
+  margin-right: 70px;
 }
 
-.left-nav a span {
-  font-size: 20px;
-  line-height: 50px;
-  white-space: normal;
-  color: #00138e;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+.left-nav a,
+.left-nav a img {
+  width: 100%;
 }
 
 .right-left a {
   color: #333;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s linear;
 }
 
@@ -44,11 +41,33 @@
 }
 
 .home-right {
-  width: 75%;
+  width: 88%;
   min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-login button {
+  border: none;
+  background-color: #0026ff;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Roboto";
+  padding: 8px 18px;
+  border-radius: 50px;
+  box-shadow: 0 8px 21px 0 rgb(0 39 255 / 25%);
+}
+
+.header-login button a {
+  color: #fff;
 }
 
 .right-left ul {
@@ -108,14 +127,18 @@
     display: block;
   }
 
+  .left-nav {
+    width: 16.5%;
+  }
+
   .ham-burger svg {
     font-size: 26px;
   }
 
-  .home-right{
+  .home-right {
     transform: translateX(-100%);
   }
-  
+
   .home-right {
     /* display: none; */
     width: 300px;
@@ -161,6 +184,12 @@
     margin-bottom: 20px;
   }
 
+  .header-login {
+    flex-direction: column;
+    margin-top: 24px;
+    align-items: flex-start;
+  }
+
   .active {
     display: block;
     transform: translateX(0%);
@@ -170,5 +199,11 @@
 @media only screen and (max-width: 290px) {
   .home-right {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .left-nav {
+    width: 30%;
   }
 }

@@ -1,0 +1,131 @@
+.profile {
+  margin: 0 10%;
+}
+
+.profile-container {
+  display: flex;
+  padding: 6rem 0 25rem 0;
+}
+
+.left-profile {
+  width: 50%;
+}
+
+.right-profile {
+  width: 50%;
+  padding-top: 2rem;
+}
+
+.left-profile .profile-img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.left-profile .profile-img img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image-change-btn {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.profile-image-change-btn button {
+  border: none;
+  color: rgba(0, 0, 0, 0.63);
+  font-size: 24px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.63);
+  font-family: "Roboto";
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.right-profile div {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.right-profile div b {
+  font-weight: bold;
+  font-family: "Poppins";
+}
+
+.profile-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-btns button {
+  color: #fff;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.profile-btns button a {
+  color: black;
+  font-size: 18px;
+  font-family: "Roboto";
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+}
+
+.profile-btns .delete-btn {
+  color: red;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+#alert-dialog-description input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+  z-index: 22;
+  border: none;
+  font-size: 30px;
+}
+
+#alert-dialog-description{
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile {
+    margin: 0 2%;
+  }
+  .profile-container {
+    display: block;
+    padding: 6rem 0 6rem 0;
+  }
+  .left-profile {
+    width: 100%;
+  }
+  .left-profile .profile-img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  .right-profile {
+    width: 100%;
+    padding-top: 2rem;
+  }
+  .profile-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

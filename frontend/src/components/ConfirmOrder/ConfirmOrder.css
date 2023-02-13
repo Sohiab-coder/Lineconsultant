@@ -1,0 +1,131 @@
+.confirmOrderPage {
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+}
+
+.confirmOrderPage > div:last-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.confirmOrderPage .confirm-order-main {
+  padding: 5rem;
+}
+.confirmshippingArea h2,
+.confirmCartItems h2,
+.orderSummaryTotal h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+  font-family: "Roboto";
+}
+.confirmshippingAreaBox div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.confirmshippingAreaBox div p {
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  font-family: "Roboto";
+}
+.confirmshippingAreaBox div span {
+  font-size: 25px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: black;
+  opacity: 0.7;
+}
+
+.confirmCartItemsContainer {
+  max-height: 20vmax;
+  overflow-y: auto;
+}
+
+.confirmCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  justify-content: space-between;
+  margin: 2vmax 0;
+}
+
+.confirmCartItemsContainer > div > img {
+  width: 5vmax;
+}
+
+.confirmCartItemsContainer > div > a {
+  color: #575757;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.confirmCartItemsContainer > div > span {
+  font-weight: 600;
+  font-family: "Roboto";
+  color: #5e5e5e;
+  font-size: 18px;
+}
+
+.orderSummaryTotal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderSummaryTotal > p,.orderSummaryTotal > span {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Roboto";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+  padding: 1vmax;
+}
+
+.orderSummary > button {
+  background-color: #0026ff;
+  color: white;
+  width: 100%;
+  padding: 1vmax;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  font: 400 1vmax "Roboto";
+}
+
+.orderSummary > button:hover {
+  background-color: #2343f8;
+}
+
+@media screen and (max-width: 600px) {
+  .confirmOrderPage {
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+
+  .confirmOrderPage .confirm-order-main {
+    padding: 1rem;
+  }
+
+  .confirmshippingAreaBox div:last-child {
+    display: block;
+  }
+
+  .confirmCartItemsContainer div a {
+    font-size: 16px;
+  }
+
+  .confirmCartItemsContainer div span {
+    font-size: 14px;
+  }
+
+  .orderSummary button{
+    font: 400 3vmax "Roboto";
+  }
+}

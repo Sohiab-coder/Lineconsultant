@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Contact.css";
-import { useDispatch, useSelector } from "react-redux";
-import { contactForm } from "../../Redex/userAction";
-import toast from "react-hot-toast";
-import Loader from "../../components/Loader/Loader";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Contact = () => {
@@ -13,32 +9,9 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const dispatch = useDispatch();
-  const {
-    loading,
-    message: contactMessage,
-    error,
-  } = useSelector((state) => state.user);
-
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(contactForm(name, lastName, email, message));
-    setName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
   };
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-      dispatch({ type: "clearError" });
-    }
-    if (contactMessage) {
-      toast.success(contactMessage);
-      dispatch({ type: "clearMessage" });
-    }
-  }, [dispatch, error, contactMessage]);
 
   return (
     <section>
@@ -95,61 +68,57 @@ const Contact = () => {
               assist you as soon as possible.
             </p>
           </div>
-          {loading ? (
-            <Loader />
-          ) : (
-            <form
-              className="form"
-              onSubmit={submitHandler}
-              action="https://formspree.io/f/mrgvpgpo"
-              method="POST"
-            >
-              <div className="contact-inputs">
-                <div className="seprat">
-                  <input
-                    name="name"
-                    placeholder="Enter Name"
-                    required
-                    className="contact-input"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                  <input
-                    name="lastname"
-                    placeholder="Enter Last Name"
-                    required
-                    className="contact-input"
-                    type="text"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                  />
-                </div>
+          <form
+            className="form"
+            onSubmit={submitHandler}
+            action="https://formspree.io/f/mrgvpgpo"
+            method="POST"
+          >
+            <div className="contact-inputs">
+              <div className="seprat">
                 <input
-                name="email"
-                  placeholder="Enter Email"
+                  name="name"
+                  placeholder="Enter Name"
                   required
                   className="contact-input"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
-                <textarea
-                name="message"
-                  className="contact-input"
-                  placeholder="Message..."
+                <input
+                  name="lastname"
+                  placeholder="Enter Last Name"
                   required
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  cols="30"
-                  rows="10"
-                ></textarea>
+                  className="contact-input"
+                  type="text"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
               </div>
-              <button className="submit" type="submit">
-                Submit
-              </button>
-            </form>
-          )}
+              <input
+                name="email"
+                placeholder="Enter Email"
+                required
+                className="contact-input"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <textarea
+                name="message"
+                className="contact-input"
+                placeholder="Message..."
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button className="submit" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
       <div className="info-container">
@@ -167,7 +136,7 @@ const Contact = () => {
       <div className="whats-app">
         <a href="tel:+8183924439">
           <IoLogoWhatsapp />
-          <span>+8183924439</span>
+          <span>Chat With Us</span>
         </a>
       </div>
     </section>

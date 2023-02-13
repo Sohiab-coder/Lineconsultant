@@ -12,52 +12,47 @@ const RefundPolicy = () => {
       </div>
       <div className="refund-center">
         <div className="refund-heading">
-          <h2>Refund Policy</h2>
+          <h2>Digital Products Refund Policy</h2>
         </div>
 
         <div className="refund-text">
+          <h2>Purchase Terms of Agreement</h2>
           <p>
-            All the plan services will be provided to the customer digitally via
-            the Internet.
+            The purchase of digital products, including subscription Packages
+            downloads and online material is subject to the following terms and
+            conditions. Consumers are advised to review carefully before making
+            any purchase.
           </p>
-          <p>If you have any questions about this policy, please contact us.</p>
+          <h2>Payment + Refund Policy</h2>
           <p>
-            We ensure the refunds in order to provide the highest level of
-            service possible, such that they attain the outmost benefits every
-            time. We try our level best to offer quality services that match
-            every aspect of the business of our esteemed customers. Refund to
-            Payments in any custom design project is made by us as a courtesy to
-            the client however our internal management reserves the complete
-            right to approve the refund request of any customer.
-          </p>
-          <p>
-            Refund Policy for New Accounts are covered by a 30 day money back
-            guarantee where we refund your money if you are dissatisfied with
-            our works. In case when a client is not completely satisfied with
-            our services, we can provide a refund which takes a maximum of 30
-            working days where we process in the clients account either by
-            Credits or direct deposit through the bank account.
+            All transactions for purchase of intangible products, pdf downloads,
+            resource material, and online content are made through payment
+            gateways such as PayPal or Stripe that use SSL encryption. These
+            payment gateways are safe and secure for using all types of credit
+            cards and debit cards in different countries and your details are
+            not stored during this process.
           </p>
           <p>
-            All refunds will be issued to the original purchaser in the same
-            Bank account as provided.
+            Since your purchase is a digital product, it is deemed “used” after
+            download or opening, and all purchases made on{" "}
+            <a href="https://www.lineconsultant.com/" target={"blank"}>
+              www.LineConsultant.com
+            </a>{" "}
+            are non-refundable or exchangeable. Since the products made
+            available here are intangible, there is a strict no refund policy.
           </p>
           <p>
-            Refunds for all customers and unsatisfied work issues will be made
-            in the proper approval of the client. The customer needs to specify
-            the details of account and reason to the associates after which we
-            will proceed as per requirements.
+            We reserves the right to amend any information, including but not
+            limited to prices, technical specifications, terms of purchase and
+            product or service offerings without prior notice.
           </p>
-          <h5>InFront Web Workers</h5>
-          <div className="refund-contact">
-            <p>
-              <strong>Phone</strong> – +8183924439
-            </p>
-            <br />
-            <p>
-              <strong>Email</strong> – contact@lineconsultant.com
-            </p>
-          </div>
+          <h2>Delivery of Goods and Services</h2>
+          <p>
+            If you do not receive the digital product link upon purchasing, you
+            can immediately contact (contact@lineconsultant.com) with your
+            transaction/payment details to ensure your product is delivered as
+            soon as possible.
+          </p>
         </div>
       </div>
       <div className="info-container">

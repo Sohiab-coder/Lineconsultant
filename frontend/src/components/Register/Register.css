@@ -1,0 +1,119 @@
+.main-form {
+  width: 40%;
+  margin: auto;
+  padding: 8rem 0 15rem;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-heading h1 {
+  font-family: "Roboto";
+  font-size: 35px;
+  font-weight: bold;
+  color: #00138e;
+}
+
+.my-form {
+  width: 100%;
+}
+
+form .inputs-div {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+form .inputs-div svg {
+  position: absolute;
+  font-size: 27px;
+  margin-left: 10px;
+}
+
+form .inputs-div .inputs {
+  padding: 15px 8px 15px 50px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  outline: none;
+  font-size: 19px;
+  color: #000;
+  font-family: "Roboto";
+  width: 100%;
+}
+
+form button {
+  background-color: #00138e;
+  color: #fff;
+  padding: 1rem 3rem;
+  font-family: "Roboto";
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+.login-btn {
+  margin-top: 25px;
+}
+
+form button:hover {
+  background-color: #fff;
+  color: #00138e;
+  border: 1px solid #00138e;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar input {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-left: 35px;
+}
+
+.avatar input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+  margin-left: 20px;
+  z-index: 22;
+  padding: 15px;
+  border: none;
+}
+
+.forget {
+  text-align: end;
+}
+
+.forget a {
+  border-bottom: 1px solid #333;
+  font-family: "Roboto";
+  font-size: 17px;
+  color: #333;
+  padding-bottom: 6px;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.forget a:hover {
+  border-bottom: 1px solid #00138e;
+  color: #00138e;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-form {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-form {
+    width: 95%;
+  }
+}

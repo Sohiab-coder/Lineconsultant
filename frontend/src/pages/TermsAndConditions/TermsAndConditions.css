@@ -18,6 +18,15 @@
   margin-bottom: 35px;
 }
 
+.main-para-term {
+  margin-bottom: 40px;
+}
+
+.main-para-term h3 {
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
 .term-left,
 .term-right {
   width: 50%;
@@ -31,19 +40,59 @@
   width: 80%;
 }
 
-.term-text p {
+.term-text p,
+.term-text ul p {
   margin-bottom: 22px;
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 15px;
-  color: #333;
+  font-size: 20px;
+  color: black;
 }
 
-.term-text h3 {
-  margin: 20px 0;
-  font-size: 20px;
-  font-family: "Poppins";
-  font-weight: 600;
+.term-text ul li {
+  list-style: inside;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.term-text h1 {
+  color: red;
+  font-size: 35px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.term-text .red-li {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.term-text ul li a {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.term-text ul li span {
+  color: black;
+  font-weight: bold;
+}
+
+.term-text p a {
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.term-text p span {
+  color: black;
+  font-weight: bold;
+}
+
+.term-text h2 {
+  color: red;
+  font-family: "Roboto";
+  margin-bottom: 15px;
+  font-size: 30px;
 }
 
 @media only screen and (max-width: 990px) {

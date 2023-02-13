@@ -160,9 +160,9 @@ const Home = () => {
         <Home4 />
         <Home5 />
         <div className="whats-app">
-          <a href="http://wa.me/qr/7COUQGIELTRM1" target={"_blank"}>
+          <a href="http://wa.me/qr/7COUQGIELTRM1" target={"blank"}>
             <IoLogoWhatsapp />
-            <span>+8183924439</span>
+            <span>Chat With Us</span>
           </a>
         </div>
       </section>
