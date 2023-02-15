@@ -16,7 +16,7 @@ import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
 import ResetPassword from "./components/ResetPassword/ResetPassword";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadUser } from "./Redex/Actions/userAction";
 import toast, { Toaster } from "react-hot-toast";
@@ -29,17 +29,18 @@ import AdminUsers from "./pages/Admin/AdminUsers";
 import SingleUser from "./components/SingleUser/SingleUser";
 import ChangeProfile from "./components/ChangeProfile/ChangeProfile";
 import { ProtectedRoute } from "protected-route-react";
-// import PaymentOrder from "./components/PaymentOrder/PaymentOrder";
-// import axios from "axios";
-// import { Elements } from "@stripe/react-stripe-js";
-// import { loadStripe } from "@stripe/stripe-js";
+import PaymentOrder from "./components/PaymentOrder/PaymentOrder";
+import axios from "axios";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import OrderSuccess from "./components/OrderSuccess/OrderSuccess";
 
 function App() {
-  // const [stripeApiKey, setStripeApiKey] = useState("");
-  // async function getStripeApiKey() {
-  //   const { data } = await axios.get("/api/v1/stripeapikey");
-  //   setStripeApiKey(data.stripeApiKey);
-  // }
+  const [stripeApiKey, setStripeApiKey] = useState("");
+  async function getStripeApiKey() {
+    const { data } = await axios.get("/api/v1/stripeapikey");
+    setStripeApiKey(data.stripeApiKey);
+  }
 
   const dispatch = useDispatch();
   const { message, error, isAuthenticated, user } = useSelector(
@@ -48,7 +49,7 @@ function App() {
 
   useEffect(() => {
     dispatch(loadUser());
-    // getStripeApiKey();
+    getStripeApiKey();
   }, [dispatch]);
 
   useEffect(() => {
@@ -146,6 +147,16 @@ function App() {
             <Route path="/process/payment" element={<PaymentOrder />} />
           </Elements>
         )} */}
+        {stripeApiKey && (
+          <Route
+            path="/process/payment"
+            element={
+              <Elements stripe={loadStripe(stripeApiKey)}>
+                <PaymentOrder />
+              </Elements>
+            }
+          />
+        )}
         <Route
           path="/admin/createproduct"
           element={
@@ -182,6 +193,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/success" element={<OrderSuccess />} />
       </Routes>
       <Footer />
       <Toaster />

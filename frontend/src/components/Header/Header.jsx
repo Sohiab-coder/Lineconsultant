@@ -75,9 +75,7 @@ const Header = () => {
             <div className="right-right">
               <div className="contect-info">
                 <img src="/images/phone_icon.png" alt="" />
-                <a href="http://wa.me/qr/7COUQGIELTRM1" target={"blank"}>
-                  +8183924439{" "}
-                </a>
+                <p>+1 (818) 392-4439</p>
               </div>
               <div className="cart-bth">
                 <Link onClick={showNavbar} to={"/cart"}>

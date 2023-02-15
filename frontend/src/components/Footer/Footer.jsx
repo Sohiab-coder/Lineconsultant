@@ -11,11 +11,6 @@ const Footer = () => {
               <img src="/images/massage.png" alt="" />
             </div>
             <div className="footer-contact-link">
-              <a href="http://wa.me/qr/7COUQGIELTRM1" target={"blank"}>
-                +8183924439
-              </a>
-              <br />
-              <br />
               <a href="mailto:tshabbir@venturespoint.com">
                 contact@lineconsultant.com
               </a>

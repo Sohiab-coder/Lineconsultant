@@ -81,7 +81,7 @@
   filter: drop-shadow(5px 10px 5px rgba(255, 88, 0, 0.4));
 }
 
-.contect-info a {
+.contect-info p {
   display: inline-block;
   vertical-align: super;
   color: #333;
