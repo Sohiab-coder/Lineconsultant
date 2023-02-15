@@ -10,7 +10,7 @@ const OrderSuccess = () => {
       <CheckCircleIcon />
 
       <Typography>Your Order has been Placed successfully </Typography>
-      <Link to="/shop">View Orders</Link>
+      <Link to="/shop">Go Back Shop</Link>
     </div>
   );
 };
