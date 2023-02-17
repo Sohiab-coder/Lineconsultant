@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteProfile,
-} from "../../Redex/Actions/profileAction";
+import { deleteProfile } from "../../Redex/Actions/profileAction";
 import { toast } from "react-hot-toast";
+import { loadUser } from "../../Redex/Actions/userAction";
 
 const Profile = () => {
   const { user } = useSelector((state) => state.user);
@@ -14,8 +13,9 @@ const Profile = () => {
 
   const dispatch = useDispatch();
 
-  const deleteHandler = () => {
-    dispatch(deleteProfile());
+  const deleteHandler = async () => {
+    await dispatch(deleteProfile());
+    dispatch(loadUser());
   };
 
   useEffect(() => {

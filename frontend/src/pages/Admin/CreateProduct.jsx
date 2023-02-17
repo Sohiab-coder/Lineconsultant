@@ -27,7 +27,7 @@ const CreateProduct = () => {
     };
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const myForm = new FormData();
     myForm.append("name", name);
@@ -35,7 +35,8 @@ const CreateProduct = () => {
     myForm.append("category", category);
     myForm.append("description", description);
     myForm.append("file", img);
-    dispatch(createProduct(myForm));
+    await dispatch(createProduct(myForm));
+    toast.success("Product Created");
   };
 
   useEffect(() => {

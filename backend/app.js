@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const error = require("./middleware/error");
 const app = express();
+const path = require("path")
 
 // use middlewares
 app.use(express.json());
@@ -21,6 +22,13 @@ app.use("/api/v1", user);
 app.use("/api/v1", product);
 app.use("/api/v1", order);
 app.use("/api/v1", payment);
+
+app.use(express.static(path.join(__dirname, "./build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./build/index.html"));
+});
+
 
 // error middleware
 app.use(error);
